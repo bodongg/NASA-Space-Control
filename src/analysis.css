@@ -1,0 +1,33 @@
+.analysis-panel { color: #17171b; min-width: 0; }
+.analysis-intro { max-width: 78ch; margin: 0 0 28px; color: #57575d; font-size: 13px; line-height: 1.8; }
+.analysis-chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.analysis-figure { min-width: 0; margin: 0; padding-top: 21px; border-top: 1px solid #d8d8d8; }
+.analysis-figure h3 { font-family: var(--font-display); font-size: 21px; line-height: 1.25; letter-spacing: -.025em; margin: 0 0 20px; }
+.analysis-chart-wrap { position: relative; height: 300px; min-width: 0; }
+.analysis-chart-wrap canvas { display: block; }
+.analysis-figure figcaption { color: #57575d; font-size: 12px; line-height: 1.8; margin-top: 16px; max-width: 85ch; }
+.analysis-trajectory { grid-column: 1 / -1; }
+.analysis-trajectory-wrap { height: 380px; }
+.analysis-history-note { color: #57575d; font-size: 12px; line-height: 1.8; margin: 25px 0 20px; }
+.analysis-table-wrap { overflow-x: auto; padding-bottom: 8px; }
+.analysis-table-wrap:focus-visible { outline: 3px solid #3379f4; outline-offset: 4px; }
+.analysis-table { width: 100%; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; text-align: right; }
+.analysis-table caption { text-align: left; font-family: var(--font-display); font-size: 18px; font-weight: 700; padding-bottom: 16px; }
+.analysis-table th, .analysis-table td { padding: 12px 14px; border-bottom: 1px solid #d8d8d8; white-space: nowrap; }
+.analysis-table th { font-weight: 700; }
+.analysis-table thead th { color: #57575d; font-size: 11px; }
+.analysis-table th:first-child { text-align: left; padding-left: 0; }
+.analysis-table td:last-child, .analysis-table th:last-child { padding-right: 0; }
+@media (max-width: 900px) {
+  .analysis-chart-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .analysis-trajectory { grid-column: auto; }
+}
+@media (max-width: 600px) {
+  .analysis-intro { margin-bottom: 22px; font-size: 12px; }
+  .analysis-figure h3 { font-size: 21px; }
+  .analysis-chart-wrap { height: 285px; }
+  .analysis-trajectory-wrap { height: 340px; }
+  .analysis-figure figcaption, .analysis-history-note { font-size: 11px; }
+  .analysis-table th, .analysis-table td { padding-inline: 12px; }
+}
+
