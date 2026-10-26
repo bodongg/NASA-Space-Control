@@ -1,0 +1,121 @@
+Checkpoint 4 final verification — 2026-10-19 (Asia/Manila)
+
+
+> test
+> node --test src/tests/*.test.js
+
+✔ custom LEO vehicle changes propellant use and rocket equation without changing preset defaults (11.1454ms)
+✔ vehicle settings reject unsafe or unsupported overrides before flight (5.0336ms)
+✔ prediction option passes the flyby threshold while keeping impact guards (1.2758ms)
+✔ coast prediction returns to an analytical circular orbit and leaves its inputs unchanged (71.2975ms)
+✔ three-day prediction of the actual departure clears the Moon and continues beyond flyby (1104.1682ms)
+ℹ predicted closest altitude: 3523661.5254182788 m at 224228 s
+✔ prediction stops at surfaces and lost boundary, including an initial body overlap (0.7395ms)
+✔ prediction rejects invalid numerical inputs and worker returns correlated results or errors (0.8105ms)
+✔ telemetry samples actual energy and mass at 60 simulation seconds without mutating history (9.1735ms)
+✔ postburn summary reports only fuel and delta-v used during this recorded flight (1.1358ms)
+✔ telemetry retains first and terminal samples under long-flight decimation and duplicate updates (36.5039ms)
+✔ CSV exports SI values, absolute mission time, elapsed time, and postburn metadata (1.6516ms)
+✔ run storage keeps latest three flights and replaces a saved run without duplicating it (1.7083ms)
+✔ run storage safely rejects corrupted records, quota errors and unavailable storage (0.843ms)
+✔ forecast rejects incomplete state instead of silently substituting a fresh LEO (0.4119ms)
+✔ CSV quotes untrusted metadata as data while retaining negative numeric values (0.4213ms)
+✔ mission API provides manual and verified post-departure presets (5.3233ms)
+✔ Earth collision stops at the surface and freezes terminal flights (6.7223ms)
+✔ surface crossing cannot tunnel through Earth between outside endpoints (1.1484ms)
+✔ collision uses the moving Moon, even for a stationary spacecraft (8.2064ms)
+✔ initial overlaps stop without evaluating a point-mass singularity (1.1421ms)
+✔ lost flight stops at the 1 billion metre boundary (1.352ms)
+✔ fuel exhaustion leaves a playable coast and does not mutate inputs (3.9609ms)
+✔ safe warp reduces for burns and encounters, including empty tanks (2.2215ms)
+✔ mission rejects nonfinite controls, duration and warp (1.0595ms)
+✔ the actual transfer preset reconstructs its finite burn and reaches a lunar flyby (871.7046ms)
+ℹ continued-coast closest lunar altitude=3523.662 km
+ℹ flyby threshold at t=209879.000 s; lunar altitude=19999.071 km; departure fuel=901.419 kg
+✔ fuel exhaustion during a substep cannot hide an imminent surface collision (0.8389ms)
+✔ initial LEO balances Earth gravity with circular motion (3.9196ms)
+✔ Moon ephemeris returns position and velocity at a quarter orbit (0.8289ms)
+✔ Earth-centered lunar gravity subtracts Earth acceleration (0.6147ms)
+✔ thrust follows inertial heading and clamps throttle (0.6534ms)
+✔ verlet: ten Earth-only orbits preserve radius, energy and period (42.1088ms)
+ℹ max radius error=0.0064200%; max specific energy error=0.000000412%; period=5545.0927 s; analytical=5544.8554 s
+✔ verlet: zero-gravity burn matches the rocket equation (3.9359ms)
+ℹ burn delta-v=530.665023 m/s; rocket equation=530.665015 m/s
+✔ verlet: fuel exhaustion splits powered motion from coasting (1.1332ms)
+✔ verlet: moving-Moon integration agrees with a smaller reference step (13.3979ms)
+✔ rk4: ten Earth-only orbits preserve radius, energy and period (54.6102ms)
+ℹ max radius error=0.0000001%; max specific energy error=0.000000033%; period=5544.8554 s; analytical=5544.8554 s
+✔ rk4: zero-gravity burn matches the rocket equation (4.393ms)
+ℹ burn delta-v=530.665015 m/s; rocket equation=530.665015 m/s
+✔ rk4: fuel exhaustion splits powered motion from coasting (0.5186ms)
+✔ rk4: moving-Moon integration agrees with a smaller reference step (6.7087ms)
+✔ readouts distinguish circular, escape and radial trajectories (2.0487ms)
+✔ potential includes the indirect term consistent with lunar acceleration (0.7373ms)
+✔ invalid states, controls, durations and configurations fail explicitly (2.7067ms)
+✔ display heading turns gradually across the shortest wrap without changing inputs (113.5196ms)
+✔ heading easing bounds wall time and settles while simulation is paused (54.3687ms)
+✔ flight zoom eases while preserving physical surface clearance (3.184ms)
+✔ follow changes ease and reduced motion immediately uses requested camera and heading (3.0413ms)
+✔ flight follows current position through high warp, view changes, and resets (3.1272ms)
+✔ physics and configuration expose the planned interface (8.6247ms)
+✔ free fall follows the analytical vertical solution (6.6154ms)
+✔ hover throttle balances gravity at the current mass (0.6878ms)
+✔ angled thrust splits into horizontal and vertical acceleration (0.4034ms)
+✔ atmospheric drag opposes motion and the Moon has no drag (0.4615ms)
+✔ fuel burn follows thrust divided by specific impulse and g0 (0.3583ms)
+✔ thrust stops when fuel runs out partway through a step (0.3423ms)
+✔ RK4 reproduces free fall more accurately than semi-implicit Euler (0.9433ms)
+✔ touchdown requires the pad and both safe speed limits (0.5519ms)
+✔ mechanical energy uses current mass, speed, height, and gravity (0.7024ms)
+✔ state input is not mutated and impact is clamped to ground (3.2855ms)
+✔ denied fullscreen expands the existing scene and Escape restores page and focus (8.2912ms)
+✔ bound buttons enter, toggle secondary controls, and exit without native fullscreen (1.9624ms)
+✔ native fullscreen changes follow browser exit and leave unrelated fullscreen alone (1.8311ms)
+✔ exit while fullscreen request is pending cannot reactivate the scene (2.4697ms)
+✔ destroy cleans active or pending presentations and removes button and key listeners (1.7137ms)
+✔ repeated cycles restore the original overflow and a connected prior focus (1.7403ms)
+✔ explicit expanded view skips native fullscreen and restores presentation lifecycle (1.4568ms)
+ℹ tests 64
+ℹ suites 0
+ℹ pass 64
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1508.2862
+
+
+> build
+> vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 33 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                             0.67 kB │ gzip:  0.40 kB
+dist/assets/trajectoryWorker-DyDxdGaJ.js    7.73 kB
+dist/assets/OrbitalFlight-C4ciBtiG.css     20.23 kB │ gzip:  4.58 kB
+dist/assets/styles-DSX_qD2w.css            24.29 kB │ gzip:  6.26 kB
+dist/assets/Button-PXctvceW.js              1.74 kB │ gzip:  0.68 kB
+dist/assets/index-COwcbtIH.js               2.81 kB │ gzip:  1.36 kB
+dist/assets/landing-CVY21eMa.js            12.06 kB │ gzip:  4.49 kB
+dist/assets/OrbitalFlight-Bf1Bx9mm.js     223.84 kB │ gzip: 78.66 kB
+
+✓ built in 564ms
+
+
+Browser evidence — local Vite, active IAB document:
+- Desktop 1440x900, actual browser1280x720 and phone390x844: no page horizontal overflow. Captures opened and checked.
+- Native fullscreen1536x864 and explicit expanded phone view390x844 entered successfully. Same Canvas/mission; no reload on view changes.
+- Final phone panel occupies y110..357; spacecraft centered around (234,422) remains visible below it while controls are open.
+- Pause/hide/show/exit, P from focused toolbar button, Tab containment, Escape and focus/body overflow restoration checked. Pause/Exit stay visible with secondary controls hidden.
+- Stable paused manual flight0d00:00:09 /5,892kg /segment delta-v0.048km/s /fuel used108kg /2samples stayed identical across expanded/map/exit. An immediate pre-settle report read can lag the flight readouts briefly due to the existing workbench UI throttle; comparison was repeated with settled data.
+- Final transfer demo reached flyby2d10:17:59, displayed lunar altitude19,999km and automatically saved. Report retained58.17h coast,0kg additional fuel,0.000km/s segment delta-v,1,859samples after exit.
+- All4 scene rasters loaded; no browser warning/error logs.
+- Actual development rAF cadence sample: native powered scene161.8callbacks/s over1002ms; 10,000xactual-rate coast159.8callbacks/s over1002ms. Earlier phone powered sample162.8/s over1002ms. These are local high-refresh IAB callback windows, not a GPU benchmark or school-hardware FPS guarantee. No performance HUD ships in production.
+- Shortest-angle heading easing, bounded camera transitions, reduced-motion bypass, nonmutating state, surface clearance and high-warp follow covered by5new Canvas-output regression tests (RED→GREEN). Presentation protocol/races/fallback covered by7tests.
+- Native screenshots use actual screen size; viewport emulation plus native fullscreen produced invalid captures and those were replaced. Phone presentation evidence uses explicit expanded mode.
+
+Final visual verdict: see docs/checkpoint4-review.md. Physical classroom laptop/projector/offline rehearsal, team interpretation/contributions and reflection remain outstanding team work.
+
