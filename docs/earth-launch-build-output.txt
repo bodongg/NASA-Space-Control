@@ -1,0 +1,19 @@
+
+> build
+> vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 38 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                             0.67 kB │ gzip:  0.40 kB
+dist/assets/trajectoryWorker-DIeGcokn.js    8.54 kB
+dist/assets/OrbitalFlight-DZORF9Ts.css     21.78 kB │ gzip:  4.83 kB
+dist/assets/styles-DSX_qD2w.css            24.29 kB │ gzip:  6.26 kB
+dist/assets/Button-PXctvceW.js              1.74 kB │ gzip:  0.68 kB
+dist/assets/index-DkekM6Y4.js               2.81 kB │ gzip:  1.36 kB
+dist/assets/landing-CVY21eMa.js            12.06 kB │ gzip:  4.49 kB
+dist/assets/OrbitalFlight-Bw5Fvces.js     260.32 kB │ gzip: 89.96 kB
+
+✓ built in 2.07s

@@ -1,0 +1,55 @@
+
+> test
+> node --test src/tests/*.test.js
+
+✔ mission API provides manual and verified post-departure presets (3.378ms)
+✔ Earth collision stops at the surface and freezes terminal flights (2.7718ms)
+✔ surface crossing cannot tunnel through Earth between outside endpoints (0.4074ms)
+✔ collision uses the moving Moon, even for a stationary spacecraft (0.47ms)
+✔ initial overlaps stop without evaluating a point-mass singularity (0.2919ms)
+✔ lost flight stops at the 1 billion metre boundary (0.3229ms)
+✔ fuel exhaustion leaves a playable coast and does not mutate inputs (0.9194ms)
+✔ safe warp reduces for burns and encounters, including empty tanks (0.5083ms)
+✔ mission rejects nonfinite controls, duration and warp (0.6612ms)
+✔ the actual transfer preset reconstructs its finite burn and reaches a lunar flyby (631.7508ms)
+ℹ continued-coast closest lunar altitude=3523.662 km
+ℹ flyby threshold at t=209879.000 s; lunar altitude=19999.071 km; departure fuel=901.419 kg
+✔ fuel exhaustion during a substep cannot hide an imminent surface collision (0.936ms)
+✔ initial LEO balances Earth gravity with circular motion (2.6242ms)
+✔ Moon ephemeris returns position and velocity at a quarter orbit (0.3627ms)
+✔ Earth-centered lunar gravity subtracts Earth acceleration (0.342ms)
+✔ thrust follows inertial heading and clamps throttle (0.2988ms)
+✔ verlet: ten Earth-only orbits preserve radius, energy and period (17.9833ms)
+ℹ max radius error=0.0064200%; max specific energy error=0.000000412%; period=5545.0927 s; analytical=5544.8554 s
+✔ verlet: zero-gravity burn matches the rocket equation (1.4068ms)
+ℹ burn delta-v=530.665023 m/s; rocket equation=530.665015 m/s
+✔ verlet: fuel exhaustion splits powered motion from coasting (1.5001ms)
+✔ verlet: moving-Moon integration agrees with a smaller reference step (8.6988ms)
+✔ rk4: ten Earth-only orbits preserve radius, energy and period (25.7202ms)
+ℹ max radius error=0.0000001%; max specific energy error=0.000000033%; period=5544.8554 s; analytical=5544.8554 s
+✔ rk4: zero-gravity burn matches the rocket equation (0.8648ms)
+ℹ burn delta-v=530.665015 m/s; rocket equation=530.665015 m/s
+✔ rk4: fuel exhaustion splits powered motion from coasting (0.3006ms)
+✔ rk4: moving-Moon integration agrees with a smaller reference step (4.402ms)
+✔ readouts distinguish circular, escape and radial trajectories (0.6217ms)
+✔ potential includes the indirect term consistent with lunar acceleration (0.592ms)
+✔ invalid states, controls, durations and configurations fail explicitly (1.8468ms)
+✔ physics and configuration expose the planned interface (2.854ms)
+✔ free fall follows the analytical vertical solution (3.7462ms)
+✔ hover throttle balances gravity at the current mass (0.3288ms)
+✔ angled thrust splits into horizontal and vertical acceleration (0.4123ms)
+✔ atmospheric drag opposes motion and the Moon has no drag (0.3758ms)
+✔ fuel burn follows thrust divided by specific impulse and g0 (0.3945ms)
+✔ thrust stops when fuel runs out partway through a step (0.3577ms)
+✔ RK4 reproduces free fall more accurately than semi-implicit Euler (0.7497ms)
+✔ touchdown requires the pad and both safe speed limits (0.4078ms)
+✔ mechanical energy uses current mass, speed, height, and gravity (0.4212ms)
+✔ state input is not mutated and impact is clamped to ground (1.2079ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 818.4689

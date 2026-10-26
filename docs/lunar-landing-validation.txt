@@ -1,0 +1,27 @@
+Lunar landing validation —2026-10-19
+
+Automated:85/85 tests pass, zero failures. Includes64 prior tests plus10 continuous landing tests,6 renderer tests and5 landing telemetry/persistence/report tests. npm run build passes. Full final command output stored in lunar-landing-test-output.txt and lunar-landing-build-output.txt.
+
+Whole numerical variable-frame/warp run:
+2244 frames; t223096.48983925307s; fuel414.60122847411185kg;
+incoming vertical−0.2999961634834056m/s, tangent0.000007276278701007222m/s;
+tilt0.000013815691326413138rad; genuine swept Moon contact, statuslanded.
+CSV and Markdown evidence in docs/evidence/lunar-landing.csv and lunar-landing-report.md (numerical run, not a browser download).
+
+Browser actual default start→transfer→final descent→landed:
+1280×900 expanded presentation, actual terminal mission clock2d13:58:16;
+reported incoming vertical−0.297m/s, tangent0.000m/s, tilt0.001deg, fuel414.6kg;
+HUD rounds0.30m/s/415kg. Active state entered0m contact and auto-paused, report auto-saved.
+Old flyby saved records remained loadable alongside the landing record.
+Forecast stopped at contact; incoming evidence remains distinct from Moon-relative resting state.
+
+State preservation: terminal clock, fuel and settled report identical after Flight→Map→Flight, expanded exit, phone resize, native fullscreen, hide controls and exit. Native viewport1536×864 with no viewport emulation. Phone390×844 panel/rocket/ground/toolbar captured; no horizontal overflow. User714×668 full page captured atscrollY0; no overflow. No browser warnings/errors in checked session.
+
+Manual override: guidanceunchecked enables heading/throttle/engine. Actual powered run consumed fuel; paused at0d00:11:10 with798kg. Clock/fuel/guidance remained identical across expanded view, Map and exit. Unsafe contact is covered by numerical manual overspeed/lateral/tilt/dry tests; no browser state teleport used.
+
+Bounded visual pass opened desktop descent/landed, phone panel/clean, native landed and user full-page images. Clear surface contact, accessible exit and preserved NASA world. Detector once on four changed UI sources: three findings (new13px label, newgreen, incumbent16px breakpoint). Fixed in one batch to documented12px, a4e0bd,18px. No repeated detector scan.
+
+Review limitation: independent reviewer ran16 focused numerical/render checks and reproduced contact; account usage limit interrupted before final UI/data review verdict. Root reviewed remaining integration/data and performed browser checks. Independent final review is not claimed.
+
+Remaining human work: review scene, rehearse on school laptop/projector/offline, finish report interpretation/team contributions/reflection. 3D/Mars/backend/sound remain deferred.
+

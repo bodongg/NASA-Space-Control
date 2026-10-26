@@ -1,0 +1,37 @@
+Earth launch validation —2026-10-19
+
+113/113 tests pass (85prior +28added). Production build succeeds. Final command outputs in earth-launch-test-output.txt and earth-launch-build-output.txt. Targeted independent numerical/data review + integrated source review: no material issues remain. Fixed and rechecked pad support through dry staging, closest Moon tracking, air drag after early staging, ideal staged delta-v and co-rotating pad longitude. Reviewed full-run record/storage/CSV/report fuel identity.
+
+Numerical variable-frame whole flight:
+5004 frames; t225096.69786441044s; fuel411.01846023358445kg;
+incoming vertical−.29831347384195595m/s, tangent.000007418848789159105m/s;
+tilt.000011807999135915459rad; actual swept contact statuslanded.
+Initial stack553000kg; fuel516000kg. Burned511030.6845638929kg,
+discarded fuel4558.29697587352kg, remaining411.01846023358445kg =516000kg.
+Discarded dry33000kg. Staging t168.34337466784464 and1892.895833333348s.
+CSV/Markdown/JSON in docs/evidence/earth-launch* are numerical-run exports, not browser downloads.
+
+Actual production-browser start-to-finish at127.0.0.1:4173:
+Launched t0 from pad. Captured lower atmosphere t00:01:05/h8334m/Troposphere.
+Later upper-stage t00:15:17/h399km/Thermosphere (above100km convention).
+Actual mission landed2d14:31:34; incoming vertical−.297m/s, sideways.000m/s,
+tilt.001deg, fuel411.0kg. HUD rounds.30m/s/411kg. Auto-paused and saved.
+Report initial553000kg; fuel burned511034kg (rounded); discarded4554.9kg propellant;
+discarded33000kg dry mass. The same numerical flight continues through every phase.
+
+Paused mid-ascent t00:06:01/h176km/fuel63531kg identical after Flight→Map→Flight,
+expanded exit, native1536×864 entry. Hcontrols and resume worked. Terminal state survived
+map/fullscreen exit/phone390×844/user714×668. No horizontal overflow; checked browser logs
+have no warnings/errors. Old saved-run schema preserved by tests and earlier dev browser.
+
+Bounded visual pass: desktop1280×900 +phone390×844 pad images, actual8334m ascent,
+native399km orbit insertion, Moon touchdown and full traveled Earth→Moon map.
+One batch corrected photo top seam and phone layer badge overlap; final confirmation
+captures opened. Detector once on changed UI sources: exit0/no reported findings.
+Fresh visual reviewer confirmed pad/ascent/insertion clear; final contact verdict recorded
+in earth-launch-review.md. Screenshot prefix docs/screenshots/earth-launch-*.jpg.
+
+Limits: pointmass2D, prescribedMoon, exponentialatmosphere, ideal stages/heading/continuous
+tiny throttle, no heat/structure/wind/engine-minimum-throttle/landing dynamics. Artwork,
+plume scale and layer boundaries illustrative. Physical school hardware/projector/offline
+rehearsal and student interpretation/team reflection remain. No extra destinations/3D/backend.
